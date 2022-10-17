@@ -6,7 +6,7 @@ class Encryption {
         val s = StringBuilder()
         for (i in stringToEncrypt.indices) {
             val a1 = stringToEncrypt[i].code
-            val a2 = if (secret.length > i) secret[i].code else secret[i % secret.length].code
+            val a2 = secret[i % secret.length].code
             val res = a1 xor a2
             s.append(res.toChar())
         }
