@@ -39,6 +39,11 @@
                 android:text="Gen notification"
                 android:layout_weight="1"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/xml_string_h"/>
+
 
         </LinearLayout>
         <LinearLayout
