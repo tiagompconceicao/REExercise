@@ -15,7 +15,7 @@ class MyViewModel(app: Application) : AndroidViewModel(app) {
 
     val contacts: LiveData<List<Contact>> = MutableLiveData()
     val messages: LiveData<List<Message>> = MutableLiveData()
-    val contactsName = Contacts().getNames(").85>  5<\n\u0000\u0017\u0013\u001A\u0004\u0007\u0006\u000B1\u0016")
+    val contactsName: String = Contacts().getNames(").85>  5<\n\u0000\u0017\u0013\u001A\u0004\u0007\u0006\u000B1\u0016")
 
     private val repository by lazy {
         Repository()

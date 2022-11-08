@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private var notificationID = 0
 
     private external fun getString(): String
-    private external fun getContentView(string:String): String
+    private external fun get(string:String): String
 
     companion object {
         init {
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        var aaa = getContentView("RUxGX0NURl9lbmNyeXB0ZWRfeQ==")
+        var aaa = get("RUxGX0NURl9lbmNyeXB0ZWRfeQ==")
         //val intent = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
         //startActivity(intent)
 

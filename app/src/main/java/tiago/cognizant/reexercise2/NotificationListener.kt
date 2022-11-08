@@ -2,7 +2,6 @@ package tiago.cognizant.reexercise2
 
 import android.content.Context
 import android.content.Intent
-import android.os.IBinder
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.util.Log

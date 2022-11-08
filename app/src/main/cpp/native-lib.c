@@ -63,7 +63,7 @@ jstring  Java_tiago_cognizant_reexercise2_MainActivity_getString(JNIEnv * env, j
     return (*env)->NewStringUTF(env, "ELF_CTF_y");
 }
 
-jstring  Java_tiago_cognizant_reexercise2_MainActivity_getContentView(JNIEnv * env, jobject obj, jstring string){
+jstring  Java_tiago_cognizant_reexercise2_MainActivity_get(JNIEnv * env, jobject obj, jstring string){
     const char * enc = (*env)->GetStringUTFChars(env,string, 0);
     size_t out_len = decoded_size(enc)+1;
     char * out = malloc(out_len);
