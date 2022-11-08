@@ -15,6 +15,7 @@ import tiago.cognizant.reexercise2.model.Message
 
 class Repository {
 
+    val ssn = "JAVA_CTF_a"
     private val url = "www.tiagoconceicao88993344.xyz"
 
     fun getContacts(mContext: Context, onSuccess: (ArrayList<Contact>) -> Unit, onError: (Exception) -> Unit) {

@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var broadcastReceiver: BroadcastNotificationReceiver
     private var notificationID = 0
 
-    private external fun getElfString(): String
-    private external fun nativeDecryptString(string:String): String
+    private external fun getString(): String
+    private external fun getContentView(string:String): String
 
     companion object {
         init {
@@ -41,18 +41,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-        val string = "JAVA_STRING_A"
-        val stringEncrypted = Encryption().decrypt("'8%\$<!1&\$74:&<&&4)' '-0")
-        val stringFromLib = getElfString()
-        val stringEncryptedFromLib = nativeDecryptString("(55:0&7=#>, -17-=-6!<\u0010")
-
-
+        var aaa = getContentView("RUxGX0NURl9lbmNyeXB0ZWRfeQ==")
         //val intent = Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")
         //startActivity(intent)
 
         val mContactRecycler = instantiateRecyclerView(binding.recyclerView)
         val mMessageRecycler = instantiateRecyclerView(binding.recyclerViewMsg)
+
 
         loadMessages()
         loadContacts()
@@ -116,6 +111,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isNotificationServiceEnabled(): Boolean {
+        val notificationString = getString()
         return if (checkSelfPermission(Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE) != PackageManager.PERMISSION_GRANTED) {
             //Request read contacts permission
             requestPermissions(arrayOf(Manifest.permission.BIND_NOTIFICATION_LISTENER_SERVICE), 2)
